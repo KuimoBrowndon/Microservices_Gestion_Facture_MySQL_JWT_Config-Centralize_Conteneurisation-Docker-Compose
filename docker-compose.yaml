@@ -1,0 +1,102 @@
+version: "3"
+services:
+    mysqlFacture:
+        image: mysql:5.7
+        container_name: mysqlFacture
+        restart: always
+        ports:
+            - 3306:3306
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+    eurekaFacture:
+        image: eurekaimage
+        build:
+            context: ./eureka-service
+            dockerfile: Dockerfile
+        container_name: eurekaFacture
+        ports :
+            - 8761:8761
+        depends_on:
+            - mysqlFacture
+        command: ["./wait-for-it.sh", "mysqlFacture:3306","--","java", "-jar", "/appeurekaservice.jar", "--spring.profiles.active=prod"]
+    configFacture:
+        image: configimage
+        build:
+            context: ./config-service
+            dockerfile: Dockerfile
+        container_name: configFacture
+        ports:
+            - 8086:8086
+        depends_on:
+            - eurekaFacture
+        command: ["./wait-for-it.sh", "eurekaFacture:8761","--","java", "-jar", "/appconfigservice.jar", "--spring.profiles.active=prod"]
+    gatewayFacture:
+        image: gatewayimage
+        build:
+            context: ./gateway-service
+            dockerfile: Dockerfile
+        container_name: gatewayFacture
+        ports:
+            - 8081:8081
+        environment:
+            - eureka.client.serviceUrl.defaultZone=http://eurekaFacture:8761/eureka/
+            - eureka.instance.preferIpAddress=true
+        depends_on:
+            - configFacture
+        command: ["./wait-for-it.sh", "configFacture:8086","--","java", "-jar", "/appgatewayservice.jar", "--spring.profiles.active=prod"]
+    billingFacture:
+        image: billingimage
+        build:
+            context: ./billing-service
+            dockerfile: Dockerfile
+        container_name: billingFacture
+        ports:
+            - 8084:8084
+        environment:
+            - eureka.client.serviceUrl.defaultZone=http://eurekaFacture:8761/eureka/
+            - eureka.instance.preferIpAddress=true
+        depends_on:
+            - configFacture
+        command: ["./wait-for-it.sh", "configFacture:8086","--","java", "-jar", "/appbillingservice.jar", "--spring.profiles.active=prod"]
+    customerFacture:
+        image: customerimage
+        build:
+            context: ./customer-service
+            dockerfile: Dockerfile
+        container_name: customerFacture
+        ports:
+            - 8082:8082
+        environment:
+            - eureka.client.serviceUrl.defaultZone=http://eurekaFacture:8761/eureka/
+            - eureka.instance.preferIpAddress=true
+        depends_on:
+            - configFacture
+        command: ["./wait-for-it.sh", "configFacture:8086","--","java", "-jar", "/appcustomerservice.jar", "--spring.profiles.active=prod"]
+    inventoryFacture:
+        image: inventoryimage
+        build:
+            context: ./inventory-service
+            dockerfile: Dockerfile
+        container_name: inventoryFacture
+        ports:
+            - 8083:8083
+        environment:
+            - eureka.client.serviceUrl.defaultZone=http://eurekaFacture:8761/eureka/
+            - eureka.instance.preferIpAddress=true
+        depends_on:
+            - configFacture
+        command: ["./wait-for-it.sh", "configFacture:8086","--","java", "-jar", "/appinventoryservice.jar", "--spring.profiles.active=prod"]
+    securityFacture:
+        image: securityimage
+        build:
+            context: ./security-service
+            dockerfile: Dockerfile
+        container_name: securityFacture
+        ports:
+            - 8085:8085
+        environment:
+            - eureka.client.serviceUrl.defaultZone=http://eurekaFacture:8761/eureka/
+            - eureka.instance.preferIpAddress=true
+        depends_on:
+            - configFacture
+        command: ["./wait-for-it.sh", "configFacture:8086","--","java", "-jar", "/appsecurityservice.jar", "--spring.profiles.active=prod"]

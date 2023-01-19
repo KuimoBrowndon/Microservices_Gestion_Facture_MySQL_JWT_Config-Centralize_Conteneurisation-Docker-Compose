@@ -1,0 +1,13 @@
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\mappers\CustomerMapper.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\security\SecurityConfig.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\services\CustomerService.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\exceptions\CustomerNotFoundException.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\dto\CustomerResponseDTO.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\entities\Customer.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\repositories\CustomerRepository.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\configurations\ApplicationPropertiesConfiguration.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\security\JWTAuthorizationFilter.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\CustomerServiceApplication.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\services\CustomerServiceImpl.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\dto\CustomerRequestDTO.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\customer-service\src\main\java\org\ms\customerservice\web\CustomerRestAPI.java

@@ -1,0 +1,13 @@
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\repositories\ProductRepository.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\dto\ProductResponseDTO.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\security\JWTAuthorizationFilter.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\services\ProductServiceImpl.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\security\SecurityConfig.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\web\ProductRestAPI.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\services\ProductService.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\dto\ProductRequestDTO.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\mappers\ProductMapper.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\exceptions\InventoryNotFoundException.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\configurations\ApplicationPropertiesConfiguration.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\entities\Product.java
+D:\WORKSPACE\Intellij_Idea_Ultimate\Microservices_Gestion_Factures_Java\inventory-service\src\main\java\org\ms\inventoryservice\InventoryServiceApplication.java
